@@ -72,7 +72,7 @@ def preprocess(
         # Shuffle and split the dataset
         train_data, validation_data, test_data = np.split(
             df_model_data.sample(frac=1, random_state=1729),
-            [int(0.75 * len(df_model_data)), int(0.9 * len(df_model_data))],
+            [int(0.80 * len(df_model_data)), int(0.9 * len(df_model_data))],
         )
     
         print(f"## Data split > train:{train_data.shape} | validation:{validation_data.shape} | test:{test_data.shape}")
